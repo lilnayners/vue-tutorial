@@ -16,12 +16,17 @@
 <body>
 
     <div id="root" class="container">
-        <modal v-if="showModal" @close="showModal = false">
-            <p>Bacon ipsum dolor amet cupim short loin beef ribs, turkey pork belly burgdoggen bresaola landjaeger alcatra. Venison pig
-                boudin tri-tip alcatra buffalo. Shankle jowl ribeye chicken tri-tip cow biltong strip steak capicola spare ribs pancetta
-                fatback pork flank short loin.</p>
-        </modal>
-        <button @click="showModal = true">Show Modal</button>
+        <tabs>
+            <tab name="About Us" :selected="true">
+                <h1>here is the content for the about us section</h1>
+            </tab>
+            <tab name="About Our Culture">
+                <h1>here is the content for the about our culture section</h1>
+            </tab>
+            <tab name="About Our Vision">
+                <h1>here is the content for the about our vision section</h1>
+            </tab>
+        </tabs>
     </div>
     <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
     <script src="/js/main.js"></script>
