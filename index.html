@@ -16,19 +16,10 @@
 <body>
 
     <div id="root" class="container">
-        <tabs>
-            <tab name="About Us" :selected="true">
-                <h1>here is the content for the about us section</h1>
-            </tab>
-            <tab name="About Our Culture">
-                <h1>here is the content for the about our culture section</h1>
-            </tab>
-            <tab name="About Our Vision">
-                <h1>here is the content for the about our vision section</h1>
-            </tab>
-        </tabs>
+        <coupon @applied="onCouponApplied"></coupon>
+        <h1 v-if="couponApplied">You used a coupon!</h1>
     </div>
     <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html> 
