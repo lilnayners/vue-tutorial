@@ -16,15 +16,13 @@
 <body>
 
     <div id="root" class="container">
-        <modal>
-            <template slot="header">My Title</template>
-             Bacon ipsum dolor amet meatloaf ribeye pork loin bresaola, tri-tip leberkas kevin jowl. Sausage meatball pig prosciutto
-            sirloin tri-tip buffalo kevin capicola t-bone.
-            <template slot="footer">
-                <button class="button is-success">Save changes</button>
-                <button class="button">Cancel</button>
-            </template>
-        </modal>
+        <progress-view inline-template>
+            <div>
+                <h1>Your Progress Through This Course Is {{ completionRate }}%</h1>
+
+                <button @click="completionRate += 10">Update Completion Rate</button>
+            </div>
+        </progress-view>
     </div>
     <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
     <script src="js/main.js"></script>
